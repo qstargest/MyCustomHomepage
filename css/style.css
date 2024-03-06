@@ -1,0 +1,202 @@
+@import 'reset.css';
+
+body{
+    font-family: Terminus;
+    background-color: black;
+    color: white;
+}
+
+@keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.main{
+    z-index: 1;
+    animation: 2s ease-out 0s 1 popIn;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background-color: #191622;
+    border-radius: 15px;
+    width: 900px;
+    height: 450px;
+}
+
+.star{ 
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    animation: animate 5s linear forwards;
+}
+
+.star::before{
+    content: "\f005";
+    font-family: "Hack Nerd Font";
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 50px #fff;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .star{
+        font-size: 8px;
+    }  
+}
+
+#lain{
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 300px;
+    height: 450px;
+    float: right;
+}
+
+h1{
+    color: #E96379;
+    text-align: center; 
+    padding-top: 10px;
+}
+
+.search_box{
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.search_box input{  
+    padding-left: 28px;
+    width: 570px;
+    height: 50px;
+    background-color: black;
+    color: #67e480;
+    border-color: #5A4B81;
+    border-radius: 7px;
+    outline: none;
+}
+
+.search_box input:focus{
+    border-color: #67e480;
+    color: white;
+}
+
+#google-icon{  
+    margin-top: -72px;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+#search-icon{
+    position: relative;
+    z-index: 2;
+    margin-top: -35px;
+    float: right;
+    margin-right: 25px; 
+    width: 20px;
+    height: 20px;
+}
+.links{
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #E96379;
+    height: 100px;
+    width: 570px;
+}
+
+.links h2{
+    margin-top: -20px; 
+    font-size: 30px;
+    font-weight: 550;
+    text-align: center;
+    color: #5A4B81;
+}
+
+ul {  
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    list-style: none;  
+    padding-top: 15px; 
+    padding-left: 55px; 
+    text-align: center;
+    font-size: 17px;
+    font-weight: 550;
+    color: #67e480;
+    text-decoration: underline;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown li a{
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 100px;
+    background: #5A4B81;  
+    color: #67e480;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 5px; 
+}
+
+ul li a:hover{
+    background: #191622;
+} 
+
+ul li:hover .dropdown{ 
+    display: block;  
+}
+
+.time_date{
+    margin-top: 45px; 
+    text-align: center;
+}
+
+#time{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#date{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.copyright{
+    font-family: 'Times New Roman', Times, serif;
+    content: "©stargest 2024";
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
