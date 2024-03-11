@@ -193,8 +193,7 @@ ul li:hover .dropdown{
 }
 
 .copyright{
-    font-family: 'Times New Roman', Times, serif;
-    content: "©stargest 2024";
+    font-family: 'Times New Roman', Times, serif; 
     position: fixed;
     bottom: 0;
     width: 100%;
